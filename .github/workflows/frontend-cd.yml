@@ -39,6 +39,11 @@ on:
         required: true
         type: string
 
+  workflow_run:
+    workflows: ["Frontend CI - Build & Push Image"]  # The name of the CI workflow
+    types:
+      - completed
+
 jobs:
   deploy_frontend:
     runs-on: ubuntu-latest
