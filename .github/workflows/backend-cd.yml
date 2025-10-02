@@ -41,7 +41,7 @@ jobs:
 
       - name: Attach ACR
         run: |
-           az aks update --name ${{ github.event.inputs.aks_cluster_name }} --resource-group ${{ github.event.inputs.aks_resource_group }} --attach-acr ${{ github.event.inputs.aks_acr_name }}
+           az aks update --name disuruweek9aks --resource-group deakinuni --attach-acr disuruweek9acr --subscription 02cae586-01f1-4a62-9b8d-16328def7d1b
 
       - name: Deploy Backend Infrastructure (Namespace, ConfigMaps, Secrets, Databases)
         run: |
